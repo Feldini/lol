@@ -1,0 +1,203 @@
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
+}
+
+/* Page layout with 3 columns */
+.page-container {
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+}
+
+/* Left sidebar (menu) */
+.sidebar-left,
+.sidebar-right {
+  background-color: #1d1d1d;
+  padding: 1rem;
+  position: fixed; /* Fixes the sidebar in place */
+  top: 0; /* Keeps the sidebar at the top */
+  height: 100vh; /* Takes full height */
+  z-index: 1000; /* Ensures the sidebar is above other content */
+  width: 20rem;
+}
+
+.sidebar-left {
+  border-right: 1px solid #333;
+  left: 0; /* Align the left sidebar to the left of the screen */
+}
+
+.sidebar-right {
+  border-left: 1px solid #333;
+  right: 0; /* Align the right sidebar to the right of the screen */
+}
+
+/* Feed container */
+.feed {
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  height: 100vh; /* Full viewport height */
+  padding: 0; /* Remove any padding */
+}
+
+/* News feed container */
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px; /* Limit max width to avoid stretching */
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto; /* Ensures it is centered horizontally */
+  background-color: #121212; /* Background color for the feed */
+}
+
+/* News article styling */
+.news-article {
+  background-color: #1d1d1d;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Headline and content */
+.news-article h2 {
+  font-size: 1.3rem;
+  color: #1da1f2; /* Blue color */
+}
+
+.news-article p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.news-article .timestamp {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.news-article .content {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.news-article img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Loading and Error messages */
+.loading, .error {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+
+/* Menu item style */
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item:hover {
+  background-color: #333;
+}
+
+/* Icons in menu items */
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+/* Post button style */
+.post-button {
+  width: 100%;
+  background-color: #1da1f2; /* Twitter-like blue */
+  border: none;
+  padding: 0.8rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #1a91d1; /* Slightly darker blue on hover */
+}
+
+/* Post input area */
+.post-input {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.post-input input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  margin-right: 1rem;
+}
+
+/* Individual post styling */
+.post {
+  background-color: #1d1d1d;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.post .user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.post .user-info img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.post .content {
+  margin-top: 0.8rem;
+}
+
+.post .content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.8rem;
+}
+
+.post .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.post .actions button {
+  background: none;
+  border: none;
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.post .actions button:hover {
+  text-decoration: underline;
+}
